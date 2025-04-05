@@ -1,0 +1,8 @@
+from simulation import generate_rss_data
+from detection import detect_clusters
+from visualization import plot_clusters
+
+if _name_ == "_main_":
+    data, labels = generate_rss_data(num_attackers=3)
+    detected_clusters = detect_clusters(data)
+    plot_clusters(data, detected_clusters, labels)
